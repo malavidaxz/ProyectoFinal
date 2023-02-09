@@ -1,0 +1,30 @@
+
+  <div class="contenedor">
+    <div class="contenedor__login  p-[2rem] rounded-[10px] bg-white">
+        <img src="https://i.pinimg.com/originals/f5/85/b9/f585b9e2c54ca8d026d2d21243f616f3.png" alt="imagen" class="img">
+        <p class="titulo">Fruits</p>
+        <form [formGroup]="login">
+            <div class="mb-4">
+                <label class="uppercase font-bold text-xs" for="">Correo*</label>
+                <input type="text" id="Correo"
+                name="Correo"
+                formControlName="Correo" placeholder="Netboard" class="input__text w-full outline-0">
+            </div>
+
+            <div class="mb-4">
+                <label class="uppercase font-bold text-xs" for="">Contraseña*</label>
+                <input type="password" id="Password"
+                name="Password"
+                formControlName="Password" placeholder="Username" class="input__text w-full outline-0 ">
+            </div>
+            <div class="text-end">
+              <a routerLink="/register" class="text-[.8rem] my-3 block text-blue-600 hover:text-blue-800">¿Deseas crearte una cuenta?</a>
+            </div>
+            
+            <div class="">
+                <button type="button" class="btn bg-blue-700 hover:bg-blue-800 text-white font-bold w-full py-3 rounded-full"  (click)="validacion()">Registrar</button>
+            </div>
+            
+        </form>
+    </div>
+</div>

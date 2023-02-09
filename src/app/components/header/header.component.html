@@ -1,0 +1,36 @@
+<div class="contenedor">
+    <div class="w-full bg-black text-white py-3 px-4 ">
+      <div class="flex justify-between px-[2rem]">
+        <div class="flex justify-center items-center">
+            <img src="https://cdn.shopify.com/s/files/1/0303/8376/7687/files/la_fruteria_logo.jpg?height=628&pad_color=fff&v=1614297336&width=1200" class="logo" alt="angular" width="70" height="70">
+            <div class="flex">
+                <a routerLink=""   class="mr-2 hover:text-orange-400">Inicio</a>
+                <a routerLink="/productos"   class="mr-2 hover:text-orange-400">Productos</a>
+                <div class="" *ngIf="rol == '0' && login">
+                    <a routerLink="/tableprod" class="mr-2 hover:text-orange-400">Agregar</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="">
+            <div class="flex mt-4">
+                <div class="" *ngIf="login, else falso">
+                    <button (click)="logout()" class="mr-4 hover:text-red-400">Cerrar sesión</button>
+                </div>
+
+                <ng-template #falso>
+                    <a routerLink="/login">Iniciar sesión</a>
+                </ng-template>
+
+
+                <div class="" *ngIf="rol == '1' && login">
+                    <a>Hola, {{nombre}}</a>
+                </div>
+                <div class="" *ngIf="rol == '0' && login">
+                    <a>Hola, {{nombre}}</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
